@@ -7,3 +7,12 @@ datasource db {
   provider = "sqlite"
   url      = "file:./trigger.db"
 }
+
+model Users {
+  id_user  Int     @id @default(autoincrement())
+  name     String
+  email    String  @unique
+  password String
+  role     String  @default("common_user")
+  age      Int?
+}
