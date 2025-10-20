@@ -1,5 +1,5 @@
 import express from "express";
-import roteador from "./Router/Routers.js";
+import roteador from "./routers/Routers.js";
 
 const app = express();
 app.use(express.json());
