@@ -13,7 +13,7 @@ model Users {
   name     String
   email    String  @unique
   age      Int?
-  password String
+  password String  
   CPF      String  @unique
   CEP      String  @unique
   isAdmin  Boolean @default(false)

@@ -1,10 +1,10 @@
 import { Router } from "express";
-import { mensagem } from "../Controller/Controllers.js";
+import { createUser } from "../Controller/Controllers.js";
 
 const roteador = Router();
 
-roteador.get("/", (req, res) => {
-    mensagem(req,res)
+roteador.post("/", (req, res) => {
+    createUser(req,res)
 })
 
 
