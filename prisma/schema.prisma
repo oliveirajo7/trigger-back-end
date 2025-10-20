@@ -13,6 +13,6 @@ model Users {
   name     String
   email    String  @unique
   password String
-  role     String  @default("common_user")
+  isAdmin  Boolean @default(false)
   age      Int?
 }
