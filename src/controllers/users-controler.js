@@ -1,27 +1,23 @@
-import { PrismaClient } from "@prisma/client"
+import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient()
 
 async function createUser(req, res) {
-    
+
     const {name, email, age, password, CPF, CEP} = req.body
 
-    const novoUser = {
+    const newUser = {
         name: name,
         email: email,
-        age: age, 
+        age: age,
         password: password,
         CPF: CPF,
         CEP: CEP
     }
 
-    const criar = await prisma.users.create({
-        data: novoUser
+    const createNewUser = prisma.users.create({
+        data: createUser
     })
-
-    return res.send(200).body(criar)
-
 }
-
 
 export {createUser}
