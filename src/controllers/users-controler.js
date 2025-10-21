@@ -2,6 +2,16 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient()
 
+async function getUsers(req, res) {
+    try {
+        const users = await prisma.users.findMany();
+        res.status(200).json(users);
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: "Erro ao buscar usuários" });
+    }
+}
+
 async function createUser(req, res) {
     const { name, email, age, password, CPF, CEP } = req.body;
 
@@ -24,4 +34,7 @@ async function createUser(req, res) {
     }
 };
 
-export {createUser}
+export {
+    createUser,
+    getUsers
+}
