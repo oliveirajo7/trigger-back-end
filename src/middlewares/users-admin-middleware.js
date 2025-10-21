@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 export async function verifyAdmin(req, res, next) {
   try {
     const user = req.user;
-        
+    
     if (!user) {
       return res.status(401).json({ mensagem: "Usuário não autenticado" });
     }
