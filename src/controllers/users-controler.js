@@ -13,10 +13,6 @@ async function getUsers(req, res) {
 <<<<<<< HEAD
 
 
-    const createNewUser = prisma.users.create({
-        data: newUser
-    })
-
     return res.send(201).body(newUser)
 
 =======
