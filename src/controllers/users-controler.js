@@ -10,15 +10,6 @@ async function getUsers(req, res) {
         console.log(error);
         res.status(500).json({ message: "Erro ao buscar usuários" });
     }
-<<<<<<< HEAD
-
-
-    return res.send(201).body(newUser)
-
-=======
-
-    return res.send(201).body(newUser)
->>>>>>> 817cd20cd3bc41b02e97329511f81bf4461082e5
 }
 
 async function createUser(req, res) {
