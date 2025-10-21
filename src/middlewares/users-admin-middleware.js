@@ -11,7 +11,7 @@ export async function verifyAdmin(req, res, next) {
     }
 
     const usuarioBanco = await prisma.users.findUnique({
-      where: { id: user.id }
+      where: { id_user: user.id_user },
     });
 
     if (!usuarioBanco) {
