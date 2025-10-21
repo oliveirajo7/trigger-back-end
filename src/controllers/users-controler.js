@@ -10,6 +10,8 @@ async function getUsers(req, res) {
         console.log(error);
         res.status(500).json({ message: "Erro ao buscar usuários" });
     }
+
+    return res.send(201).body(newUser)
 }
 
 async function createUser(req, res) {
