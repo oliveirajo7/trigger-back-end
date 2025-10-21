@@ -16,8 +16,10 @@ async function createUser(req, res) {
     }
 
     const createNewUser = prisma.users.create({
-        data: createUser
+        data: newUser
     })
+
+    return res.send(201).body(newUser)
 }
 
 export {createUser}
